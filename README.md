@@ -79,12 +79,25 @@ The initial state is set to `user`.
 Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
 
 * user
-	* Input: "go to state1"
-		* Reply: "I'm entering state1"
-
-	* Input: "go to state2"
-		* Reply: "I'm entering state2"
-
+	* Input: any message
+		Replay:go to menu
+* menu
+	* Input: "計算卡路里"
+		go to cal_drink_calories state
+	* Input: "美食推薦"
+		go to food_recommend state
+* cal_drink_calories
+	* Input: "茶底"
+		* Input: "糖度"
+			* Input: "配料"
+				* go to 計算熱量 state
+* food_recommend
+	* Input: "台南美食"
+		go to tainan_food state
+	* Input: "嘉義美食"
+		go to chiayi_food state
+	* Input: "高雄美食"
+		go to kaohsiung_food state
 ## Deploy
 Setting to deploy webhooks on Heroku.
 
