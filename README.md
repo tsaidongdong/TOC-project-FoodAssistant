@@ -71,7 +71,7 @@ Or You can use [servo](http://serveo.net/) to expose local servers to the intern
 
 
 ## Finite State Machine
-![fsm](./img/show-fsm.png)
+![fsm](https://github.com/tsaidongdong/TOC-project-FoodAssistant/blob/main/fsm.png)
 
 ## Usage
 The initial state is set to `user`.
