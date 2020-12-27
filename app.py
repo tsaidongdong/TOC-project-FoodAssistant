@@ -122,7 +122,7 @@ def webhook_handler():
         response = machine.advance(event)
         if response == False:
             if event.message.text.lower() == 'fsm':
-                send_image_message(event.reply_token, 'https://i.imgur.com/7ksU1oN.jpg?1') 
+                send_image_message(event.reply_token, 'https://i.imgur.com/mhOz55s.png') 
             elif machine.state == 'user' and event.message.text.lower() != 'fsm':
                 send_text_message(event.reply_token, '輸入『menu』即可開始使用卡路里小幫手。\n隨時輸入『fsm』可以得到當下的狀態圖。')
             else:
